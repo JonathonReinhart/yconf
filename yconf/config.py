@@ -30,7 +30,7 @@ import argparse
 from yconf.util import NestedDict
 
 
-class _Loader(yaml.Loader):
+class _Loader(yaml.SafeLoader):
 
     def __init__(self, *args, **kwargs):
         yaml.Loader.__init__(self, *args, **kwargs)
